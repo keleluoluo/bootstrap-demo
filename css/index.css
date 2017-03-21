@@ -1,0 +1,613 @@
+
+body{
+    font-size:12px;
+    color:#333;
+    height:2000px;
+}
+
+a{
+    color:#333;
+}
+
+a:hover{
+    text-decoration: none;
+    color:red;
+}
+
+ul li{
+    list-style: none;
+}
+
+/*申明字体图标*/
+
+@font-face {font-family: 'wjs-font';
+    src: url('../fonts/MiFie-Web-Font.eot'); /* IE9*/
+    src: url('../fonts/MiFie-Web-Font.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/MiFie-Web-Font.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/MiFie-Web-Font.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/MiFie-Web-Font.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+[class^="wjs-icon-"]{
+    font-family: "wjs-font";
+}
+
+.wjs-icon-phone::before{
+    content:"\e908";
+}
+
+.wjs-icon-tel::before{
+    content:"\e909";
+}
+
+.wjs-icon-logo::before{
+    content:"\e920";
+}
+
+.wjs-icon-word::before{
+    content:"\e93e";
+}
+
+.wjs-icon-E903::before{
+    content: "\e903";
+}
+.wjs-icon-E906::before{
+    content: "\e906";
+}
+.wjs-icon-E905::before{
+    content: "\e905";
+}
+.wjs-icon-E907::before{
+    content: "\e907";
+}
+.wjs-icon-E901::before{
+    content: "\e901";
+}
+.wjs-icon-E900::before{
+    content: "\e900";
+}
+.wjs-icon-E904::before{
+    content: "\e904";
+}
+.wjs-icon-E902::before{
+    content: "\e902";
+}
+.wjs-icon-E906::before{
+    content: "\e906";
+}
+.wjs-icon-new01::before{
+    content: "\e90e";
+}
+.wjs-icon-new02::before{
+    content: "\e90f";
+}
+.wjs-icon-new03::before{
+    content: "\e910";
+}
+.wjs-icon-new04::before{
+    content: "\e911";
+}
+.wjs-icon-partner01::before{
+    content:"\e946";
+}
+.wjs-icon-partner02::before{
+    content: "\e92f";
+}
+.wjs-icon-partner03::before{
+    content: "\e92e";
+}
+.wjs-icon-partner04::before{
+    content: "\e92a";
+}
+.wjs-icon-partner05::before{
+    content: "\e929";
+}
+.wjs-icon-partner06::before{
+    content: "\e931";
+}
+.wjs-icon-partner07::before{
+    content: "\e92c";
+}
+.wjs-icon-partner08::before{
+    content: "\e92b";
+}
+.wjs-icon-partner09::before{
+    content: "\e92d";
+}
+
+
+/*头部*/
+.header{
+    border-bottom:1px solid #ccc;
+    height: 40px;
+}
+
+.header .row>div{
+    height: 40px;
+    border-left:1px solid #ccc;
+    text-align: center;
+    line-height: 40px;
+}
+
+.header .row>div:first-child{
+    border-left:none;
+}
+
+.header  .row .btn-register{
+    padding:2px 10px;
+}
+
+.header .row .code{
+    position: absolute;
+    z-index: 1;
+    left:41px;
+    top:41px;
+    display: none;
+}
+
+.header .row>div:nth-child(1):hover .code{
+    display: block;
+}
+
+/*导航样式*/
+
+.wjs-default {
+    background-color: #fff;
+    margin-bottom:0;
+    border:none;
+    border-bottom:1px solid #ccc;
+    border-radius: 0;
+
+}
+.wjs-default .navbar-brand {
+    color: #777;
+    display: block;
+   height:80px;
+    line-height: 50px;
+
+}
+
+.wjs-default .navbar-brand span:nth-child(1){
+    font-size:50px;
+    color:red;
+    vertical-align: middle;
+}
+
+.wjs-default .navbar-brand span:nth-child(2){
+    font-size:30px;
+    color:#000;
+    vertical-align: middle;
+}
+
+.wjs-default .navbar-brand:hover,
+.wjs-default .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+.wjs-default .navbar-text {
+    color: #777;
+}
+.wjs-default .navbar-nav > li > a {
+    color: #777;
+    line-height: 50px;
+    font-size:14px;
+    border-bottom:2px solid transparent;
+}
+.wjs-default .navbar-nav > li > a:hover,
+.wjs-default .navbar-nav > li > a:focus {
+    color: #333;
+    background-color: transparent;
+    border-bottom:2px solid red;
+}
+.wjs-default .navbar-nav > .active > a,
+.wjs-default .navbar-nav > .active > a:hover,
+.wjs-default .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+.wjs-default .navbar-nav > .disabled > a,
+.wjs-default .navbar-nav > .disabled > a:hover,
+.wjs-default .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+.wjs-default .navbar-toggle {
+    border-color: #ddd;
+    margin-top:25px;
+}
+.wjs-default .navbar-toggle:hover,
+.wjs-default .navbar-toggle:focus {
+    background-color: #ddd;
+}
+.wjs-default .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+.wjs-default .navbar-collapse,
+.wjs-default .navbar-form {
+    border-color: #e7e7e7;
+}
+.wjs-default .navbar-nav > .open > a,
+.wjs-default .navbar-nav > .open > a:hover,
+.wjs-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+
+/* banner*/
+
+.banner  .carousel .pc-img{
+    height: 410px;
+    background: no-repeat center ;
+}
+
+.banner  .carousel .m-img{
+    width: 100%;
+}
+
+/*信息模块*/
+
+.info{
+    padding:30px 0;
+}
+
+
+.info .row .media .media-left span{
+    font-size:24px;
+}
+
+.info .row .media .media-body{
+    font-family: "Microsoft Yahei";
+
+}
+
+.info .row .media .media-body h4{
+    font-size:18px;
+}
+
+.info .row .media .media-body p{
+    font-size:14px;
+}
+
+.info .row>div>a{
+    padding:15px;
+}
+
+/* 在 中屏 和大屏 改变 .container 宽度*/
+
+@media screen and (min-width: 992px) {
+    .info .container {
+        width: 910px;
+    }
+
+    .book .container{
+        width: 910px;
+    }
+
+}
+    /*预约模块*/
+
+    .book{
+        border-top:1px solid #ccc;
+        border-bottom:1px solid #ccc;
+        padding:30px;
+        font-size: 14px;
+    }
+
+    .book .bookLink{
+        color:#e92322;
+        border-bottom: 1px dashed #e92322;
+    }
+
+    .book span[class^='wjs-icon-']{
+        font-size:24px;
+    }
+
+    /* 产品模块*/
+
+.product{
+    padding-top:50px;
+    padding-bottom:50px;
+    background-color: #f1f1f1;
+}
+
+/* 产品模块导航*/
+.product-tabs {
+    border-bottom: 1px solid #ccc;
+}
+.product-tabs > li {
+    float: left;
+
+}
+.product-tabs > li > a {
+    margin-right: 2px;
+    line-height: 2;
+    border-bottom: 2px solid transparent;
+    font-size:14px;
+
+}
+.product-tabs > li > a:hover {
+    border-bottom: 2px solid red;
+    color:#333;
+}
+
+.product-tabs > li.active > a,
+.product-tabs > li.active > a:hover,
+.product-tabs > li.active > a:focus {
+    color: #555;
+    cursor: default;
+    border-bottom: 2px solid red;
+
+}
+
+/* 水平方向上超出的部分添加滚动条*/
+.nav-tab-parent{
+    overflow-x: auto;
+}
+
+/* 产品模块 tab栏 内容区域*/
+
+.product{
+    font-family: "Microsoft Yahei";
+}
+
+.product .tab-content .row>div{
+    height:170px;
+}
+
+.product .tab-content .row>div .product-in{
+    height:150px;
+    background-color: #fff;
+    margin-top:20px;
+    box-shadow: 0 0 10px 2px #ccc;
+    position: relative;
+}
+
+.product .product-in .product-left{
+    height: 150px;
+    border-right:1px dashed #ccc;
+    /* 让盒子绝缘*/
+    overflow: hidden;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.product  .product-left h4{
+    text-align: center;
+    font-size:18px;
+    height:20px;
+    overflow: hidden;
+
+}
+
+.product  .product-left>div{
+    width: 50%;
+    font-size:14px;
+
+}
+.product  .product-left>div p{
+    height:16px;
+    overflow: hidden;
+}
+
+
+.product .product-in .product-right{
+    width: 108px;
+    height: 150px;
+    float: right;
+    text-align: center;
+    font-size:14px;
+    position: relative;
+}
+/* 产品右侧模块*/
+.product .product-in .product-right p:nth-child(1){
+    color:red;
+    margin-top:30px;
+}
+.product .product-in .product-right p:nth-child(1) span{
+    font-size:45px;
+    font-weight: 700;
+}
+.product .product-in .product-right .tips{
+    position: absolute;
+    top:10px;
+    width: 100%;
+
+}
+
+.product .product-in .product-right .tips a{
+    font-size:16px;
+    line-height: 16px;
+    border:1px solid red;
+    color:red;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.product .product-in .product-right .tips .bao{
+    margin-right:15px;
+}
+
+.product .product-in .product-right::before,
+.product .product-in .product-right::after{
+    width: 10px;
+    height: 10px;
+    content:"";
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    position: absolute;
+    left:-5px;
+    top:-5px;
+    box-shadow:0 -2px 2px #d8d8d8 inset
+}
+.product .product-in .product-right::after {
+    bottom:-5px;
+    top:auto;
+    box-shadow:0 2px 2px #d8d8d8 inset
+}
+
+/* current*/
+
+.product .row>div .product-in.current{
+    background-color: red;
+    color:#fff;
+}
+
+ .product-in.current .product-right p:nth-child(1){
+     color:#fff;
+ }
+
+ .product-in .product-left  .pull-right .progress{
+     height:10px;
+ }
+
+.product-in.current::before{
+    content:"\e915";
+    font-size:30px;
+    position: absolute;
+    left:0;
+    top:-6px;
+    font-family: "wjs-font";
+}
+
+/* 新闻模块*/
+
+.news{
+    padding:45px 0;
+    font-family: "Microsoft Yahei";
+}
+
+.news .row h3{
+    font-size:20px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    line-height: 40px;
+    position: relative;
+}
+
+.news .row h3::before{
+    content:"";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    bottom:-3px;
+    right:-6px;
+
+}
+
+/* 新闻tab导航*/
+
+
+.news-tabs {
+
+}
+.news-tabs > li {
+    float: left;
+    margin-bottom:60px;
+}
+.news-tabs > li > a {
+    background-color: #ccc;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color:#fff;
+    font-size:24px;
+    text-align: center;
+    line-height: 40px;
+
+}
+.news-tabs > li > a:hover {
+    background-color: red;
+    color:#fff;
+}
+.news-tabs > li.active > a,
+.news-tabs > li.active > a:hover,
+.news-tabs > li.active > a:focus {
+
+    cursor: default;
+    background-color: red;
+
+}
+
+.news-tabs li:last-child{
+    margin-bottom:0;
+}
+
+.news .row .line{
+    position: absolute;
+    width: 1px;
+    height: 100% ;
+    border-left:1px dashed #ccc;
+    left:45px;
+    top:0;
+
+}
+
+
+
+/* 新闻内容*/
+.news .tab-content  ul >li{
+    line-height: 50px;
+    font-size:16px;
+}
+
+.news .tab-content  ul >li a{
+    color:#333;
+}
+
+
+@media screen  and (max-width: 992px){
+
+    .news-tabs > li{
+        width: 25%;
+        margin-bottom:0;
+    }
+
+    .news-tabs > li>a{
+        margin:0 auto;
+    }
+
+    .news .tab-content  ul >li{
+        line-height: 50px;
+        font-size:16px;
+        height:50px;
+        /* 让超出文字裁剪 并且 有省略号*/
+        overflow: hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+    }
+
+}
+
+/*底部*/
+
+.footer{
+    background-color: #f1f1f1;
+    padding:40px 0 ;
+    text-align: center;
+    font-family: "Microsoft Yahei";
+
+}
+.footer h3{
+    font-size:30px;
+}
+
+.footer ul li{
+    display: inline-block;
+    font-size:60px;
+    margin:0 15px;
+}
+
+
+.login-box .panel-footer{
+    height:55px;
+}
+
+.login-box  .panel-primary{
+    margin-bottom: 0px;
+}
+
+
+
